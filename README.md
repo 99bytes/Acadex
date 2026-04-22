@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Acadex - The AI-Powered Course Architect 🚀
 
-## Getting Started
+Acadex is a next-generation learning platform that uses advanced AI to instantly architect precise, video-integrated courses so you can focus strictly on learning. Generate, study, and track your progress in a unified smart-dashboard.
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Clerk](https://img.shields.io/badge/Clerk_Auth-6C47FF?style=for-the-badge&logo=clerk&logoColor=white)
+![Neon](https://img.shields.io/badge/Neon_DB-00E599?style=for-the-badge&logo=neon&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Key Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Instant AI Architect:** Input any topic in the world, and our AI builds a comprehensive structured curriculum in seconds.
+- **Dynamic Tracking:** Stay motivated with live progress tracking, milestone charts, and visual dynamic roadmaps.
+- **Video Integrations:** Each generated chapter automatically syncs with the most relevant, high-quality YouTube lectures available.
+- **Fully Responsive:** Enterprise-grade UI optimized for seamless usage across desktop, tablet, and mobile devices.
+- **Secure Authentication:** User accounts, progress saving, and protected routes handled seamlessly via Clerk.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework:** [Next.js](https://nextjs.org/) (App Router)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/) & [shadcn/ui](https://ui.shadcn.com/)
+- **Authentication:** [Clerk](https://clerk.dev/)
+- **Database:** [Neon (Serverless Postgres)](https://neon.tech/) & [Drizzle ORM](https://orm.drizzle.team/)
+- **AI Integration:** Google Gemini / Groq SDK
+- **Video API:** YouTube Data API
+- **Deployment:** [Vercel](https://vercel.com/)
 
-## Learn More
+## 🚀 Getting Started
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Ensure you have Node.js installed and the following API keys ready:
+- Clerk Publishable & Secret Keys
+- Neon Database URL
+- Gemini / Groq API Keys
+- YouTube Data API Key
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Installation
 
-## Deploy on Vercel
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/Acadex.git
+   cd Acadex
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. **Set up environment variables**
+   Create a `.env.local` file in the root directory and add your keys:
+   ```env
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+   CLERK_SECRET_KEY=your_clerk_secret_key
+   NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+   NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+   
+   DATABASE_URL=your_neon_db_url
+   NEXT_PUBLIC_DATABASE_URL=your_neon_db_url
+   
+   GEMINI_API_KEY=your_gemini_key
+   GROQ_API_KEY=your_groq_key
+   YOUTUBE_API_KEY=your_youtube_key
+   ```
+
+4. **Run Database Migrations** (Optional depending on your setup)
+   ```bash
+   npm run db:push
+   ```
+
+5. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## 🤝 Contributing
+Contributions are welcome! Feel free to open an issue or submit a pull request if you have ideas on how to improve Acadex.
+
+## 📄 License
+This project is licensed under the MIT License.
