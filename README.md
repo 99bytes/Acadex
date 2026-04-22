@@ -2,6 +2,8 @@
 
 Acadex is a next-generation learning platform that uses advanced AI to instantly architect precise, video-integrated courses so you can focus strictly on learning. Generate, study, and track your progress in a unified smart-dashboard.
 
+**🌟 Live Demo:** [https://acadex-six.vercel.app/](https://acadex-six.vercel.app/)
+
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Clerk](https://img.shields.io/badge/Clerk_Auth-6C47FF?style=for-the-badge&logo=clerk&logoColor=white)
