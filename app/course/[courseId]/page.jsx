@@ -26,12 +26,12 @@ const Course = () => {
   return (
     <div>
       <AppHeader hideSidebar={true}/>
-      <div className='px-10 py-5 bg-white border-b sticky top-0 z-20 shadow-sm'>
+      <div className='px-4 md:px-10 py-4 bg-white border-b sticky top-0 z-20 shadow-sm'>
          <Button variant='outline' onClick={()=>router.back()} className='rounded-full hover:bg-gray-100 transition-all font-semibold flex items-center'>
            <ArrowLeft className='mr-2 w-4 h-4'/> Return to Dashboard
          </Button>
       </div>
-      <div className='flex gap-10'>
+      <div className='flex flex-col lg:flex-row gap-6 lg:gap-10'>
         <ChapterListSidebar courseInfo={courseInfo}/>
         <ChapterContent courseInfo={courseInfo} refreshData={()=>getEnrolledCourseById()}/>
       </div>

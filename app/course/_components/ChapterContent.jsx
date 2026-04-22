@@ -56,8 +56,8 @@ const ChapterContent = ({ courseInfo ,refreshData }) => {
    
   
   return (
-    <div className='p-10'>
-      <div className='flex justify-between'>
+    <div className='p-4 md:p-10 w-full flex-1'>
+      <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-4'>
         <h2 className='font-bold text-2xl'>
         {selectedChapterIndex + 1}) {courseContent?.[selectedChapterIndex]?.courseData?.chapterName}
       </h2>
@@ -78,10 +78,15 @@ const ChapterContent = ({ courseInfo ,refreshData }) => {
 
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-4'>
         {videoData?.map((video, index) =>index<2 && (
-          <div key={index} className='rounded-lg overflow-hidden shadow'>
-            <YouTube videoId={video?.videoId} 
-            className='w-full' />
-            <p className='text-sm mt-1 text-center'>{video?.title}</p>
+          <div key={index} className='rounded-lg overflow-hidden shadow w-full'>
+            <div className='aspect-video w-full'>
+              <YouTube 
+                videoId={video?.videoId} 
+                className='w-full h-full' 
+                opts={{ width: '100%', height: '100%' }}
+              />
+            </div>
+            <p className='text-sm mt-2 mb-2 px-2 text-center text-gray-700'>{video?.title}</p>
           </div>
         ))}
       </div>

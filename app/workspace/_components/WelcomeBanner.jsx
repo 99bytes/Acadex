@@ -3,7 +3,7 @@ import { Sparkles } from 'lucide-react'
 
 function WelcomeBanner() {
   return (
-    <div className='p-8 bg-[#111827] rounded-2xl relative overflow-hidden mb-8 shadow-sm'>
+    <div className='p-6 md:p-8 bg-[#111827] rounded-2xl relative overflow-hidden mb-8 shadow-sm'>
       {/* Background Gradients */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500 rounded-full blur-[80px] opacity-20 translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500 rounded-full blur-[80px] opacity-20 -translate-x-1/3 translate-y-1/3 pointer-events-none"></div>

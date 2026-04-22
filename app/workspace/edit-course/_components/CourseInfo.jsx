@@ -65,11 +65,13 @@ const CourseInfo = ({course,viewCourse}) => {
         </div>
 
         {!viewCourse?
-        <Button className={'max-w-sm'} onClick={GenerateCourseContent}
+        <Button className={'w-full md:max-w-sm md:w-auto'} onClick={GenerateCourseContent}
         disabled={loading}>
           {loading? <Loader2Icon className='animate-spin'/>:<Settings/>}Generate Content</Button>
           :
-          <Link href={'/course/'+course?.cid}><Button><PlayCircle/>Continue Learning</Button></Link> }
+          <Link href={'/course/'+course?.cid} className="w-full block md:inline-block md:w-auto">
+             <Button className="w-full md:w-auto"><PlayCircle className="mr-2 h-4 w-4"/>Continue Learning</Button>
+          </Link> }
       </div>
       {course?.BannerImageUrl ? (
   <Image
